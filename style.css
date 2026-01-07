@@ -1,0 +1,209 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #FFFFFF;
+    line-height: 1.6;
+    overflow-x: hidden; /* Prevent horizontal scroll */
+}
+#video-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    object-fit: cover;
+}
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(10, 31, 68, 0.4); /* Dark Blue overlay for readability */
+    z-index: -1;
+}
+header {
+    background-color: rgba(10, 31, 68, 0.9); /* Semi-transparent for readability */
+    color: #FFFFFF;
+    padding: 30px;
+    text-align: center;
+    animation: fadeIn 1s ease-in;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+    position: relative;
+    z-index: 1;
+}
+header h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+nav {
+    margin-top: 15px;
+}
+nav a {
+    color: #FFC107;
+    margin: 0 20px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s, transform 0.3s;
+}
+nav a:hover {
+    color: #00BFA6;
+    transform: scale(1.1);
+}
+section {
+    padding: 60px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    animation: slideIn 1s ease-out;
+    position: relative;
+    z-index: 1;
+}
+.hero {
+    color: #FFFFFF;
+    text-align: center;
+    padding: 120px 20px;
+    animation: fadeIn 1.5s ease-in;
+    border-radius: 15px;
+    margin-bottom: 20px;
+    background: rgba(10, 31, 68, 0.6); /* Additional overlay for hero */
+}
+.hero h1 {
+    font-size: 3.5em;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+}
+.hero p {
+    font-size: 1.3em;
+    font-style: italic;
+}
+.about, .services, .portfolio, .contact {
+    background-color: rgba(232, 245, 233, 0.95); /* Light green (#E8F5E9) for a fresh, tree-inspired look */
+    color: #0A1F44; /* Dark blue for contrast */
+    margin: 30px 0;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+    padding: 40px;
+}
+.about h2, .services h2, .portfolio h2, .contact h2 {
+    color: #000000; /* Black */
+    border-bottom: 3px solid #FFC107; /* Gold accent */
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+.about p {
+    color: #2C2C2C; /* Dark gray */
+}
+.services ul {
+    list-style: none;
+    padding: 0;
+}
+.services li {
+    margin: 20px 0;
+    padding: 20px;
+    background-color: rgba(10, 31, 68, 0.8);
+    border-radius: 10px;
+    transition: transform 0.3s, box-shadow 0.3s;
+    position: relative;
+}
+.services li:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(26, 115, 232, 0.3);
+}
+.services li h3 {
+    color: #FFC107;
+    margin-bottom: 10px;
+}
+.services li p {
+    color: #E0E0E0; /* Light gray for service items */
+}
+.portfolio .item {
+    margin: 30px 0;
+    padding: 25px;
+    background-color: rgba(10, 31, 68, 0.8);
+    border-radius: 10px;
+    animation: fadeInUp 1s ease-out;
+    transition: transform 0.3s;
+}
+.portfolio .item:hover {
+    transform: scale(1.02);
+}
+.portfolio .item h3 {
+    color: #FFC107;
+}
+.portfolio .item p {
+    color: #E0E0E0; /* Light gray for portfolio items */
+}
+form {
+    display: flex;
+    flex-direction: column;
+    max-width: 600px;
+    margin: 0 auto;
+}
+input, textarea {
+    margin: 15px 0;
+    padding: 15px;
+    border: 2px solid #E0E0E0;
+    border-radius: 8px;
+    font-size: 1em;
+    background-color: rgba(232, 245, 233, 0.95); /* Light green */
+    color: #000000; /* Black text for readability */
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+input:focus, textarea:focus {
+    border-color: #1A73E8;
+    box-shadow: 0 0 10px rgba(26, 115, 232, 0.3);
+    outline: none;
+}
+button {
+    padding: 15px;
+    background: linear-gradient(135deg, #FFC107, #00BFA6);
+    color: #0A1F44;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1.1em;
+    font-weight: bold;
+    transition: background 0.3s, transform 0.3s;
+}
+button:hover {
+    background: linear-gradient(135deg, #00BFA6, #1A73E8);
+    transform: translateY(-2px);
+}
+footer {
+    background-color: rgba(10, 31, 68, 0.9);
+    color: #FFFFFF;
+    text-align: center;
+    padding: 30px;
+    box-shadow: 0 -4px 8px rgba(0,0,0,0.3);
+    position: relative;
+    z-index: 1;
+}
+footer a {
+    color: #FFC107;
+    text-decoration: none;
+    margin: 0 10px;
+    transition: color 0.3s;
+}
+footer a:hover {
+    color: #00BFA6;
+}
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+@keyframes slideIn {
+    from { transform: translateX(-100%); }
+    to { transform: translateX(0); }
+}
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+@media (max-width: 768px) {
+    .hero h1 { font-size: 2.5em; }
+    section { padding: 40px 15px; }
+    nav a { margin: 0 10px; }
+}
